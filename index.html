@@ -10,43 +10,55 @@
 <body>
     <div class="navigation">
         <ul>
-            <li class="list">
+            <li class="list active">
                 <a href="#">
                     <span class="icon"></span>
-                    <ion-icon name="home"></ion-icon>
+                    <ion-icon name="home-outline"></ion-icon>
                     <span class="text">Home</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"></span>
-                    <ion-icon name="person"></ion-icon>
+                    <ion-icon name="person-outline"></ion-icon>
                     <span class="text">Profile</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"></span>
-                    <ion-icon name="text"></ion-icon>
+                    <ion-icon name="text-outline"></ion-icon>
                     <span class="text">Message</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"></span>
-                    <ion-icon name="photos"></ion-icon>
+                    <ion-icon name="photos-outline"></ion-icon>
                     <span class="text">Photos</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
                     <span class="icon"></span>
-                    <ion-icon name="settings"></ion-icon>
+                    <ion-icon name="settings-outline"></ion-icon>
                     <span class="text">Settings</span>
                 </a>
             </li>
-        </div>
         </ul>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <div class="indicator">
+
+        </div>
+    </div>
+
+<script>
+    const list =document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) => item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item) => item.addEventListener('click', activeLink));
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
